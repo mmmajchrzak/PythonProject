@@ -133,16 +133,16 @@ while True:
 
     # Kolizje
 
-    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 62 and ball.ycor() > paddle_l.ycor() - 62:
+    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 65 and ball.ycor() > paddle_l.ycor() - 65:
         ball.dx *= -1
 
 
-    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 62 and ball.ycor() > paddle_r.ycor() - 62:
+    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 65 and ball.ycor() > paddle_r.ycor() - 65:
         ball.dx *= -1
 
-    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 62 and ball.ycor() > paddle_l.ycor() - 62:
+    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 65 and ball.ycor() > paddle_l.ycor() - 65:
         ball.color("red")
 
 
-    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 62 and ball.ycor() > paddle_r.ycor() - 62:
+    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 65 and ball.ycor() > paddle_r.ycor() - 65:
         ball.color("blue")
