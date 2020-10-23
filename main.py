@@ -35,8 +35,8 @@ ball.shape("circle")
 ball.penup()
 ball.goto(0, 0)
 ball.shapesize(stretch_wid=0.8, stretch_len=0.8)
-ball.dx = 0.15
-ball.dy = 0.15
+ball.dx = 0.25
+ball.dy = 0.25
 ball.color("limegreen")
 
 # Tablica Wyników
@@ -77,8 +77,8 @@ def paddle_r_down():
 
 # Klawisze
 window.listen()
-window.onkeypress(paddle_l_up, "a")
-window.onkeypress(paddle_l_down, "z")
+window.onkeypress(paddle_l_up, "w")
+window.onkeypress(paddle_l_down, "s")
 window.onkeypress(paddle_r_up, "Up")
 window.onkeypress(paddle_r_down, "Down")
 
@@ -133,16 +133,16 @@ while True:
 
     # Kolizje
 
-    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 65 and ball.ycor() > paddle_l.ycor() - 65:
+    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 70 and ball.ycor() > paddle_l.ycor() - 70:
         ball.dx *= -1
 
 
-    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 65 and ball.ycor() > paddle_r.ycor() - 65:
+    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 70 and ball.ycor() > paddle_r.ycor() - 70:
         ball.dx *= -1
 
-    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 65 and ball.ycor() > paddle_l.ycor() - 65:
+    if ball.xcor() < -435 and ball.ycor() < paddle_l.ycor() + 70 and ball.ycor() > paddle_l.ycor() - 70:
         ball.color("red")
 
 
-    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 65 and ball.ycor() > paddle_r.ycor() - 65:
+    elif ball.xcor() > 435 and ball.ycor() < paddle_r.ycor() + 70 and ball.ycor() > paddle_r.ycor() - 70:
         ball.color("blue")
